@@ -14,6 +14,7 @@ export default function Home() {
       </Head>
       <h1>Welcome!</h1>
       <NavLink href={"/projects"} text={"Projects"}/>
+      <NavLink href="/about" text={"About"}/>
     </div>
     )
 }
