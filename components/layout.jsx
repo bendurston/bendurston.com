@@ -1,8 +1,8 @@
-import NavBar from "./navBar";
+import NavMenu from "./navMenu";
 
 
 export default function Layout() {
     return (
-        <NavBar />
+        <NavMenu />
     )
 }
