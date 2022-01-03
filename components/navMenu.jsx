@@ -1,4 +1,5 @@
 import { Menu, Transition } from '@headlessui/react'
+import { useState } from 'react'
 
 // Import Components
 import NavLink from './navLink'
@@ -8,20 +9,21 @@ import { FiMenu } from 'react-icons/fi'
 import { AiOutlineClose } from 'react-icons/ai'
 
 export default function NavMenu() {
-  
+  let [ isShow, setIsShow ] = useState(false)
+
   return (
       <div>
       <Menu as="div" className="bg-yellow-600">
         {({ open }) => (
           <>
-            <Menu.Button>
-              {open ? (
-                <AiOutlineClose />
-              ) : (
-                <FiMenu />
-                )
-              }
-            </Menu.Button>
+              <Menu.Button>
+                {open ? (
+                  <AiOutlineClose className={`animate-flippyDo`} onClick={() => !isShow && setIsShow(true)}/>
+                ) : (
+                  <FiMenu className={isShow && "animate-flippyUndo"}/>                  
+                  )
+                }
+              </Menu.Button>
             <Transition
               enter="transition duration-100 ease-out"
               enterFrom="transform scale-95 opacity-0"
@@ -44,7 +46,6 @@ export default function NavMenu() {
             </Transition>
           </>
         )}
-        
       </Menu>
 
     </div>
