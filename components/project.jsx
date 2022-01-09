@@ -1,19 +1,8 @@
-import { getProjects } from "../lib/api/api"
 
-export async function getStaticProps() {
-    const projects = await getProjects()
-    return {
-        props: {
-            projects
-        },
-    }
-}
-
-export default function Project ({ projects }) {
+export default function Project () {
     return (
         <div>
-            { console.log(projects) }
-            <>{console.log("hello")}</>
+           Projects
         </div>
     )
 }
