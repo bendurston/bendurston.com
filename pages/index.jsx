@@ -1,16 +1,4 @@
-// Nextjs imports
-import Head from 'next/head'
-
-// Component imports
-
-
+//TODO redirect button
 export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>bendurston.com</title>
-      </Head>
-      <h1>Welcome!</h1>
-    </div>
-    )
+  return <p>Redirecting...</p>;
 }

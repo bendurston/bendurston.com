@@ -1,8 +1,8 @@
 // CSS Imports
-import '../styles/globals.css'
+import "../styles/globals.css";
 
 // Components Imports
-import Layout from '../components/layout'
+import Layout from "../components/layout";
 
 function Website({ Component, pageProps }) {
   return (
@@ -10,8 +10,7 @@ function Website({ Component, pageProps }) {
       <Layout />
       <Component {...pageProps} />
     </>
-  )
-};
+  );
+}
 
 export default Website;
-
