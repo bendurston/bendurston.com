@@ -11,12 +11,12 @@ export async function getStaticProps() {
     },
   };
 }
-
+//grid md:grid-cols-2 grid-cols-1 gap-6
 export default function Projects({ projects }) {
   return (
-    <div>
+    <div className="container m-auto justify-center">
       <h1>Projects</h1>
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 gap-4 md:grid-cols-2 sm:grid-cols-1 m-3">
+      <div className="flex flex-wrap justify-center">
         {projects.map((project) => (
             <Project
               key={project.id}
@@ -25,6 +25,7 @@ export default function Projects({ projects }) {
               inDevelopment={project.inDevelopment}
               technologies={project.technologies}
               link={project.link}
+              linkText={project.linkText}
             />
         ))}
       </div>

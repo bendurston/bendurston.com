@@ -9,16 +9,17 @@ export default function Project({
   description,
   inDevelopment,
   technologies,
-  link
+  link,
+  linkText
   }) {
-  
+  //md:max-w-md max-w-sm 
   return (
-    <div className="px-5 py-3 rounded-md bg-stone-100">
+    <div className="lg:basis-5/12 basis-1/1 bg-red-100 lg:m-3 p-10 mx-4 my-3">
       <p>{title}</p>
       <Technology technologies={technologies} />
       <p>{inDevelopment}</p>
       <p>{description}</p>
-      <a href={link}>click me</a>
+      <a href={link}>{linkText}</a>
     </div>
   );
 }
