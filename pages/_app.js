@@ -2,13 +2,15 @@
 import "../styles/globals.css";
 
 // Components Imports
-import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 function Website({ Component, pageProps }) {
   return (
     <>
-      <Layout />
+      <Header />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

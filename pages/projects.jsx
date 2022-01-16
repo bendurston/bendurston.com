@@ -11,25 +11,29 @@ export async function getStaticProps() {
     },
   };
 }
-//grid md:grid-cols-2 grid-cols-1 gap-6
+
 export default function Projects({ projects }) {
-  let delay = 200;
   return (
-    <div className="container m-auto justify-center">
-      <h1>Projects</h1>
-      <div className="flex flex-wrap justify-center">
-        {projects.map((project, index) => (
-            <Project
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              inDevelopment={project.inDevelopment}
-              technologies={project.technologies}
-              link={project.link}
-              linkText={project.linkText}
-              delayMulti={index}
-            />
-        ))}
+    <div className="slate-100">
+      <div className="grid justify-items-center mb-4 mt-8">
+        <h1 className="font-helvetica text-5xl font-extrabold">PROJECTS</h1>
+        <p className="font-helvetica text-lg">Projects that I have or am currently working on.</p>
+      </div>
+      <div className="container m-auto">
+        <div className="flex flex-wrap justify-center">
+          {projects.map((project, index) => (
+              <Project
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                inDevelopment={project.inDevelopment}
+                technologies={project.technologies}
+                link={project.link}
+                linkText={project.linkText}
+                delayMulti={index}
+              />
+          ))}
+        </div>
       </div>
     </div>
   );

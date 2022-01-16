@@ -28,15 +28,21 @@ export default function Project({
       leave="transform duration-200 transition ease-in-out"
       leaveFrom="opacity-100 scale-100 "
       leaveTo="opacity-0 scale-95"
-      className="lg:basis-5/12 basis-1/1 bg-red-100 lg:m-3 p-10 mx-4 my-3"
+      className="lg:basis-5/12 basis-1/1 bg-neutral-100 rounded-md lg:m-3 pt-5 pb-10 px-10 mx-4 my-3"
       style={{ transitionDelay: delay}}
     >
-      <div>
-        <p>{title}</p>
+      <div className="grid justify-items-center">
+        <p className="font-ubuntu text-lg font-medium">{title}</p>
         <Technology technologies={technologies} />
-        <p>{inDevelopment}</p>
-        <p>{description}</p>
-        <a href={link}>{linkText}</a>
+        <div className="flex flex-row flex-nowrap justify-center space-x-4 w-full font-dongle text-2xl">
+          <a className="" href={link}>{linkText}</a>
+          {inDevelopment && 
+            <p className="">In Development</p>
+          }
+        </div>
+        
+        <p className="font-dongle text-2xl">{description}</p>
+        
       </div>
     </Transition>
   );

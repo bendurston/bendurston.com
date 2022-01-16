@@ -21,6 +21,11 @@ module.exports = {
           '100%': { transform: 'rotate(0deg) scale(1)' }
         }
       },
+      fontFamily: {
+        dongle: ['Dongle', 'sans-serif'],
+        ubuntu: ['Ubuntu', 'sans-serif'],
+        helvetica: ['Helvetica', 'sans-serif'],
+      },
     },
   },
   plugins: [],
