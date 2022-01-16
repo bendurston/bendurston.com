@@ -13,11 +13,12 @@ export async function getStaticProps() {
 }
 //grid md:grid-cols-2 grid-cols-1 gap-6
 export default function Projects({ projects }) {
+  let delay = 200;
   return (
     <div className="container m-auto justify-center">
       <h1>Projects</h1>
       <div className="flex flex-wrap justify-center">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
             <Project
               key={project.id}
               title={project.title}
@@ -26,6 +27,7 @@ export default function Projects({ projects }) {
               technologies={project.technologies}
               link={project.link}
               linkText={project.linkText}
+              delayMulti={index}
             />
         ))}
       </div>

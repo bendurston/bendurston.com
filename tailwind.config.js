@@ -20,7 +20,7 @@ module.exports = {
           '50%': { transform: 'rotate(90deg) scale(0.5)' },         
           '100%': { transform: 'rotate(0deg) scale(1)' }
         }
-      }
+      },
     },
   },
   plugins: [],
