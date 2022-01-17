@@ -1,14 +1,18 @@
 // CSS Imports
-import '../styles/globals.css'
+import "../styles/globals.css";
 
 // Components Imports
-import Layout from '../components/layout'
+import Header from "../components/header";
+import Footer from "../components/footer";
 
-export default function MyApp({ Component, pageProps }) {
+function Website({ Component, pageProps }) {
   return (
-    <div>
-      <Layout />
+    <>
+      <Header />
       <Component {...pageProps} />
-    </div>
-  )
+      <Footer />
+    </>
+  );
 }
+
+export default Website;
