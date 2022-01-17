@@ -1,1 +1,6 @@
-//TODO
+export default function NavBar() {
+  return (
+      <></>
+  )
+}
+

@@ -39,7 +39,6 @@ export default function Project({
             {linkText}
             <BiLink className="self-end" size="20px" />
           </a>
-
           {inDevelopment && <p className="">In Development</p>}
         </div>
         <div
