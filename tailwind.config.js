@@ -22,11 +22,14 @@ module.exports = {
         }
       },
       fontFamily: {
-        dongle: ['Dongle', 'sans-serif'],
         ubuntu: ['Ubuntu', 'sans-serif'],
-        helvetica: ['Helvetica', 'sans-serif'],
+        openSans: ['Open Sans', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
